@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="customAction" class="com.yf.rule.action.CustomAction"></bean>
+    <bean id="customMathAction" class="com.bstek.urule.runtime.builtinaction.CustomMathAction"></bean>
+
+    <bean id="defaultExceptionHandler" class="com.yf.rule.core.DefaultHandlerExceptionResolver"></bean>
+    <bean parent="urule.props">
+        <property name="location">
+            <value>classpath:application.properties</value>
+        </property>
+    </bean>
+</beans>
